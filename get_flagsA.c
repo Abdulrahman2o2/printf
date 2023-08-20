@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
-* get_flags - Extracts formatting flags from the format string. 
-* @format: The format string containing conversion specifier.
-* @i: Pointer to the current index in the format string.
-* Return: Calculated flags based on extracted characters.
-*/
+ * get_flags - Extracts formatting flags from the format string.
+ * @format: The format string containing conversion specifier.
+ * @i: Pointer to the current index in the format string.
+ * Return: Calculated flags based on extracted characters.
+ */
+
 int get_flags(const char *format, int *i)
 {
-	/* Characters representing formatting flags */
-      /* - + 0 # ' ' */ 
-      /* Corresponding flag values */ 
-      /* 1 2 4 8 16 */
+	/* - + 0 # ' ' */
+	/* 1 2 4 8  16 */
 	int j, curr_i;
 	int flags = 0;
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
