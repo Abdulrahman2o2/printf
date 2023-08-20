@@ -46,8 +46,9 @@ int print_pointer(va_list types, char buffer[],
 		extra_c = ' ', length++;
 
 	ind++;
+}
 /**
- * print_non_printable - Prints ASCII codes in hexadecimal for non-printable characters
+ * print_non_printable - Prints ASCII codes in hexa
  * @types: List of arguments
  * @buffer: Buffer array to handle print
  * @flags: Calculates active flags
@@ -84,6 +85,9 @@ int print_non_printable(va_list types, char buffer[],
 
 	return (write(1, buffer, i + offset));
 }
+
+
+/************************* PRINT REVERSE *************************/
 /**
  * print_reverse - Prints a string in reverse order.
  * @types: List of arguments
@@ -127,3 +131,55 @@ int print_reverse(va_list types, char buffer[],
 	return (count);
 }
 
+
+/************************* PRINT A STRING IN ROT13 *************************/
+/**
+ * print_rot13string - Print a string in ROT13 encoding.
+ * @types: List of arguments
+ * @buffer: Buffer array to handle print
+ * @flags: Calculates active flags
+ * @width: Width specifier
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Number of characters printed
+ */
+int print_rot13string(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
+{
+	char x;
+	char *str;
+	unsigned int i, j;
+	int count = 0;
+	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	str = va_arg(types, char *);
+	UNUSED(buffer);
+	UNUSED(flags);
+	UNUSED(width);
+	UNUSED(precision);
+	UNUSED(size);
+
+	if (str == NULL)
+		str = "(AHYY)";
+	for (i = 0; str[i]; i++)
+	{
+		for (j = 0; in[j]; j++)
+		{
+			if (in[j] == str[i])
+			{
+				x = out[j];
+				write(1, &x, 1);
+				count++;
+				break;
+			}
+		}
+		if (!in[j])
+		{
+			x = str[i];
+			write(1, &x, 1);
+			count++;
+		}
+	}
+	return (count);
+}
