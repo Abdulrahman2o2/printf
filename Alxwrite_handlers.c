@@ -46,4 +46,39 @@ int handle_write_char(char c, char buffer[],
 
 	return (write(1, &buffer[0], 1));
 }
+/**
+ * write_number - Handles printing of signed numbers
+ * @is_negative: Indicator if the number is negative
+ * @ind: Index where the number starts in the buffer
+ * @buffer: Buffer array to handle print
+ * @flags: Flag to calculate active flags
+ * @width: Width specifier
+ * @precision: Precision specifier
+ * @size: Size specifier
+ *
+ * This function handles printing of signed numbers, considering
+ * alignment, width, precision, and padding specifications.
+ *
+ * Return: Number of characters printed
+ */
+int write_number(int is_negative, int ind, char buffer[],
+	int flags, int width, int precision, int size)
+{
+	int length = BUFF_SIZE - ind - 1;
+	char padd = ' ', extra_ch = 0;
+
+	UNUSED(size);
+
+	if ((flags & F_ZERO) && !(flags & F_MINUS))
+		padd = '0';
+	if (is_negative)
+		extra_ch = '-';
+	else if (flags & F_PLUS)
+		extra_ch = '+';
+	else if (flags & F_SPACE)
+		extra_ch = ' ';
+
+	return (write_num(ind, buffer, flags, width, precision,
+		length, padd, extra_ch));
+}
 
