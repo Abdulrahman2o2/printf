@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * determine_printability - Determines if a character is printable
+ * is_printable - Determines if a character is printable
  * @c: The character to be checked.
  *
  * Return: 1 if c is a printable character, 0 otherwise
@@ -14,7 +14,7 @@ int is_printable(char c)
 	return (0);
 }
 /**
- * add_hexadecimal_code - Appends the ASCII value in hexadecimal format to the buffer
+ * append_hexa_code - Appends the ASCII value in hexadecimal format to buffer
  * @buffer: Array of characters to store the result.
  * @i: Index at which to start appending in the buffer.
  * @ascii_code: The ASCII code to be converted to hexadecimal.
@@ -36,7 +36,7 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 	return (3);
 }
 /**
- * check_digit - Checks if a character is a digit
+ * is_digit - Checks if a character is a digit
  * @c: The character to be examined
  *
  * Return: 1 if c is a digit, 0 otherwise
@@ -49,7 +49,7 @@ int is_digit(char c)
 	return (0);
 }
 /**
- * adjust_number_size - Converts a number to the specified size
+ * convert_size_number - Converts a number to the specified size
  * @num: The number to be converted
  * @size: The desired target size for the conversion
  *
@@ -63,4 +63,20 @@ long int convert_size_number(long int num, int size)
 		return ((short)num);
 
 	return ((int)num);
+}
+/**
+ * convert_size_unsgnd - Adjusts the size of an unsigned number
+ * @num: The unsigned number to be resized
+ * @size: The target size for the number's new type
+ *
+ * Return: The resized value of num
+ */
+long int convert_size_unsgnd(unsigned long int num, int size)
+{
+	if (size == S_LONG)
+		return (num);
+	else if (size == S_SHORT)
+		return ((unsigned short)num);
+
+	return ((unsigned int)num);
 }
