@@ -48,3 +48,19 @@ int is_digit(char c)
 
 	return (0);
 }
+/**
+ * adjust_number_size - Converts a number to the specified size
+ * @num: The number to be converted
+ * @size: The desired target size for the conversion
+ *
+ * Return: The converted value of num
+ */
+long int convert_size_number(long int num, int size)
+{
+	if (size == S_LONG)
+		return (num);
+	else if (size == S_SHORT)
+		return ((short)num);
+
+	return ((int)num);
+}
