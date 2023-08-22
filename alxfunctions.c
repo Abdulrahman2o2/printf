@@ -57,17 +57,16 @@ write(1, &str[0], length);
 for (i = width - length; i > 0; i--)
 write(1, " ", 1);
 return (width);
-		}
-		else
-		{
-			for (i = width - length; i > 0; i--)
-				write(1, " ", 1);
-			write(1, &str[0], length);
-			return (width);
-		}
-	}
-
-	return (write(1, str, length));
+}
+else
+{
+for (i = width - length; i > 0; i--)
+write(1, " ", 1);
+write(1, &str[0], length);
+return (width);
+}
+}
+return (write(1, str, length));
 }
 /**
  * print_percent - Prints a percent sign
