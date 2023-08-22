@@ -8,7 +8,7 @@
 #define BUFF_SIZE 1024
 
 /* FLAGS */
-#define F_MINUS 1   /* Left-justify */
+#define F_MINUS 1   /* Left-justifyy */
 #define F_PLUS 2   /* Print a plus sign for positive numbers */
 #define F_ZERO 4 /* Pad with zeros */
 #define F_HASH 8   /* Prefix with 0, 0x, or 0X for octal or hexadecimal */
