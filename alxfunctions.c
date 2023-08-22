@@ -112,20 +112,17 @@ buffer[i--] = '0';
 buffer[BUFF_SIZE - 1] = '\0';
 num = (unsigned long int)n;
 if (n < 0)
-	{
-		num = (unsigned long int)((-1) * n);
-		is_negative = 1;
-	}
-
-	while (num > 0)
-	{
-		buffer[i--] = (num % 10) + '0';
-		num /= 10;
-	}
-
-	i++;
-
-	return (write_number(is_negative, i, buffer, flags, width, precision, size));
+{
+num = (unsigned long int)((-1) * n);
+is_negative = 1;
+}
+while (num > 0)
+{
+buffer[i--] = (num % 10) + '0';
+num /= 10;
+}
+i++;
+return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
 /**
  * print_binary - Prints an unsigned integer in binary format
