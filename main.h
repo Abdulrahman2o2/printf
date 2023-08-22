@@ -11,7 +11,7 @@
 #define F_MINUS 1   /* Left-justifyy */
 #define F_PLUS 2   /* Print a plus sign for positive numbers */
 #define F_ZERO 4 /* Pad with zeros */
-#define F_HASH 8   /* Prefix with 0, 0x, or 0X for octal or hexadecimal */
+#define F_HASH 8   /* Prefix with 0, 0x, or 0X for Octal or Hexadecimal */
 #define F_SPACE 16  /* Precede positive numbers with a space */
 
 /* SIZES */
