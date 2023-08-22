@@ -100,16 +100,14 @@ return (write(1, "%%", 1));
  * Return: Number of characters printed
  */
 int print_int(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+int flags, int width, int precision, int size)
 {
-	int i = BUFF_SIZE - 2;
-	int is_negative = 0;
-	long int n = va_arg(types, long int);
-	unsigned long int num;
-
-	n = convert_size_number(n, size);
-
-	if (n == 0)
+int i = BUFF_SIZE - 2;
+int is_negative = 0;
+long int n = va_arg(types, long int);
+unsigned long int num;
+n = convert_size_number(n, size);
+if (n == 0)
 		buffer[i--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
