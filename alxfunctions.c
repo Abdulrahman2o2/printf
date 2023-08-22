@@ -46,14 +46,12 @@ if (precision >= 6)
 str = "      ";
 }
 while (str[length] != '\0')
-		length++;
-
-	if (precision >= 0 && precision < length)
-		length = precision;
-
-	if (width > length)
-	{
-		if (flags & F_MINUS)
+length++;
+if (precision >= 0 && precision < length)
+length = precision;
+if (width > length)
+{
+if (flags & F_MINUS)
 		{
 			write(1, &str[0], length);
 			for (i = width - length; i > 0; i--)
