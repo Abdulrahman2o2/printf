@@ -39,14 +39,13 @@ UNUSED(flags);
 UNUSED(width);
 UNUSED(precision);
 UNUSED(size);
-	if (str == NULL)
-	{
-		str = "(null)";
-		if (precision >= 6)
-			str = "      ";
-	}
-
-	while (str[length] != '\0')
+if (str == NULL)
+{
+str = "(null)";
+if (precision >= 6)
+str = "      ";
+}
+while (str[length] != '\0')
 		length++;
 
 	if (precision >= 0 && precision < length)
