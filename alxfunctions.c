@@ -87,7 +87,7 @@ UNUSED(flags);
 UNUSED(width);
 UNUSED(precision);
 UNUSED(size);
-	return (write(1, "%%", 1));
+return (write(1, "%%", 1));
 }
 /**
  * print_int - Prints an integer
