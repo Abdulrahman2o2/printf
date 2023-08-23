@@ -3,7 +3,7 @@
  * handle_print - Handles the printing of arguments based on their type..
  * @fmt: The formatted string indicating the type of argument..
  * @list: List of arguments to be printed..
- * @ind: Index of the current character in the format string.
+ * @ind: Index of the current character in the format string..
  * @buffer: Buffer array to handle print.
  * @flags: Active formatting flags.
  * @width: Field width specifier.
