@@ -7,7 +7,7 @@
  * @buffer: Buffer array to handle print..
  * @flags: Active formatting flags..
  * @width: Field width specifier..
- * @precision: Precision specifier..
+ * @precision: Precision specifier.
  * @size: Size specifier.
  * Return: Number of characters printed or -1 for unsupported format.
  */
