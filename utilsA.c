@@ -49,8 +49,8 @@ int is_digit(char c)
 	return (0);
 }
 /**
- * convert_size_number - Converts a number to the specified size
- * @num: The number to be converted
+ * convert_size_number - Converts a number to the specified size.
+ * @num: The number to be converted.
  * @size: The desired target size for the conversion
  *
  * Return: The converted value of num
