@@ -14,7 +14,7 @@ int is_printable(char c)
 	return (0);
 }
 /**
- * append_hexa_code - Appends the ASCII value in hexadecimal format to buffer
+ * append_hexa_code - Appends the ASCII value in hexadecimal format to buffer.
  * @buffer: Array of characters to store the result.
  * @i: Index at which to start appending in the buffer.
  * @ascii_code: The ASCII code to be converted to hexadecimal.
