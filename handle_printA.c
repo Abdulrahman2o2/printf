@@ -4,7 +4,7 @@
  * @fmt: The formatted string indicating the type of argument..
  * @list: List of arguments to be printed..
  * @ind: Index of the current character in the format string..
- * @buffer: Buffer array to handle print.
+ * @buffer: Buffer array to handle print..
  * @flags: Active formatting flags.
  * @width: Field width specifier.
  * @precision: Precision specifier.
