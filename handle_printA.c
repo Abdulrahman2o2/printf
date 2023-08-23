@@ -8,7 +8,7 @@
  * @flags: Active formatting flags..
  * @width: Field width specifier..
  * @precision: Precision specifier..
- * @size: Size specifier..
+ * @size: Size specifier.
  * Return: Number of characters printed or -1 for unsupported format.
  */
 int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
