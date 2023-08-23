@@ -53,7 +53,7 @@ int is_digit(char c)
  * @num: The number to be converted.
  * @size: The desired target size for the conversion.
  *
- * Return: The converted value of num.
+ * Return: The converted value of num..
  */
 long int convert_size_number(long int num, int size)
 {
