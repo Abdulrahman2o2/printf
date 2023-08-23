@@ -6,7 +6,7 @@
  * @ind: Index of the current character in the format string..
  * @buffer: Buffer array to handle print..
  * @flags: Active formatting flags..
- * @width: Field width specifier..
+ * @width: Field width specifier.
  * @precision: Precision specifier.
  * @size: Size specifier.
  * Return: Number of characters printed or -1 for unsupported format.
