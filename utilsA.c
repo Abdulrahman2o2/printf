@@ -51,9 +51,9 @@ int is_digit(char c)
 /**
  * convert_size_number - Converts a number to the specified size.
  * @num: The number to be converted.
- * @size: The desired target size for the conversion
+ * @size: The desired target size for the conversion.
  *
- * Return: The converted value of num
+ * Return: The converted value of num.
  */
 long int convert_size_number(long int num, int size)
 {
