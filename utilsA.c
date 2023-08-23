@@ -65,7 +65,7 @@ long int convert_size_number(long int num, int size)
 	return ((int)num);
 }
 /**
- * convert_size_unsgnd - Adjusts the size of an unsigned number
+ * convert_size_unsgnd - Adjusts the size of an unsigned number.
  * @num: The unsigned number to be resized
  * @size: The target size for the number's new type
  *
